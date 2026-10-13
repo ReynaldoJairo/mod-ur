@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Moda Urbana ::: Tienda de Ropa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagenes/LOGO.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stile.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO FIJO -->
+    <div class="header" id="inicio">
+        <header>
+            <img src="imagenes/LOGO.png" alt="Logo Moda Urbana" class="logo">
+            <h1>Moda Urbana</h1>
+        </header>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#sugerencias">Sugerencias</a>
+            <a href="preguntas.html">Preguntas Frecuentes</a>
+        </nav>
+    </div>
+
+    <!-- SECCIÓN DE VIDEO ALARGADO -->
+    <section id="video-campana" class="seccion-video">
+        <video class="video-alargado" controls>
+            <!-- Asegúrate de que la ruta coincida con la carpeta donde guardaste tu video -->
+            <source src="videos/pagina.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </section>
+    
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <section id="catalogo" class="seccion-animada">
+        <div class="grid-productos">
+            <div class="producto-card">
+                <img src="imagenes/CasacaBoxi.png" alt="Casaca Boxi">
+                <h3>Casaca Boxi</h3>
+                <p>Estilo urbano y comodidad absoluta.</p>
+                <button>Comprar S/ 120.00</button>
+            </div>
+            <div class="producto-card">
+                <img src="imagenes/PantalonBaggy.png" alt="Pantalon Baggy">
+                <h3>Pantalón Baggy</h3>
+                <p>Ideal para el día a día.</p>
+                <button>Comprar S/ 95.00</button>
+            </div>
+            <div class="producto-card">
+                <img src="imagenes/PoloBoxi.png" alt="Polo Boxi">
+                <h3>Polo Boxi</h3>
+                <p>Diseño exclusivo y fresco.</p>
+                <button>Comprar S/ 45.00</button>
+            </div>
+            <div class="producto-card">
+                <img src="imagenes/PoloOversize.png" alt="Polo Oversize">
+                <h3>Polo Oversize</h3>
+                <p>Corte holgado para máximo confort.</p>
+                <button>Comprar S/ 55.00</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUZÓN DE SUGERENCIAS -->
+    <section id="sugerencias" class="seccion-animada">
+        <h2>Sugerencias</h2>
+        <form action="#" method="POST" class="formulario" onsubmit="alert('¡Tu sugerencia fue enviada con éxito!'); return false;">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="sugerencia" rows="4" placeholder="Coloque sus sugerencias aquí" required></textarea>
+            <button type="submit" class="btn-sugerencia">Enviar Sugerencia</button>
+        </form>
+    </section>
+
+    <!-- LIBRO DE RECLAMACIONES -->
+    <section id="reclamaciones" class="seccion-animada">
+        <h2>Libro de Reclamaciones</h2>
+        <form action="#" method="POST" class="formulario-reclamaciones" onsubmit="alert('¡Hoja de reclamación enviada con éxito!'); return false;">
+            <fieldset>
+                <legend>Identificación del consumidor reclamante</legend>
+                <label>Nombre</label>
+                <input type="text" name="nombre" required>
+                
+                <label>Domicilio</label>
+                <input type="text" name="domicilio" required>
+                
+                <label>DNI/CE</label>
+                <input type="text" name="dni" required>
+                
+                <label>Teléfono</label>
+                <input type="text" name="telefono" required>
+                
+                <label>Correo electrónico</label>
+                <input type="email" name="correo" required>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Identificación del bien contratado</legend>
+                <label>Tipo de Bien</label>
+                <select name="tipoBien" required>
+                    <option value="">Seleccionar tipo de bien</option>
+                    <option value="Producto">Producto</option>
+                    <option value="Servicio">Servicio</option>
+                </select>
+                
+                <label>Monto Reclamado</label>
+                <input type="number" name="monto" required>
+                
+                <label>Descripción</label>
+                <input type="text" name="descripcion" required>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Detalle de la reclamación y pedido del consumidor</legend>
+                <label>Tipo de Reclamación</label>
+                <select name="tipoReclamacion" required>
+                    <option value="">Seleccionar tipo de reclamación</option>
+                    <option value="Reclamo">Reclamo</option>
+                    <option value="Queja">Queja</option>
+                </select>
+                
+                <label>Detalle</label>
+                <textarea name="detalle" rows="4" placeholder="Ingresa el detalle de tu reclamación" required></textarea>
+                
+                <label>Pedido</label>
+                <textarea name="pedido" rows="4" placeholder="Ingresa el detalle de tu pedido" required></textarea>
+            </fieldset>
+            
+            <button type="submit" class="btn-enviar-reclamo">ENVIAR HOJA DE RECLAMACIÓN</button>
+        </form>
+    </section>
+
+    <!-- GOOGLE MAPS -->
+    <section id="ubicacion" class="seccion-animada">
+        <h2>Encuéntranos en nuestra tienda</h2>
+        <p>Visítanos en : Av. Alfredo Mendiola 6377, Los Olivos 15304</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7806.555647452619!2d-77.06735163348182!3d-11.955256586878306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d1d877f532d7%3A0x8db19fe8e1f40feb!2sUniversidad%20Tecnol%C3%B3gica%20del%20Per%C3%BA!5e0!3m2!1ses-419!2spe!4v1788829007977!5m2!1ses-419!2spe" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="contactenos">
+        <div class="column">
+            <p>Compañía</p>
+            <ul>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li>Tiendas Físicas</li>
+                <li>Política de Privacidad</li>
+                <li>Contáctanos</li>
+            </ul>
+        </div>
+        <div class="column">
+            <p>Atención al Cliente</p>
+            <ul>
+                <li><a href="#reclamaciones">Libro de Reclamaciones</a></li>
+                <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <p>Síguenos</p>
+            <ul>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>TikTok</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
